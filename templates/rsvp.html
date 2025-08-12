@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="form-container">
-    <h2>Product Review</h2>
+    <h2>Event RSVP</h2>
     <form method="POST">
         {{ form.hidden_tag() }}
 
@@ -21,20 +21,8 @@
             {% endfor %}
         </div>
 
-        <div class="form-group">
-            {{ form.rating.label }}
-            {{ form.rating(class_="input" + (" error" if form.rating.errors else "")) }}
-            {% for error in form.rating.errors %}
-                <span class="error-message">{{ error }}</span>
-            {% endfor %}
-        </div>
-
-        <div class="form-group">
-            {{ form.review.label }}
-            {{ form.review(class_="textarea" + (" error" if form.review.errors else "")) }}
-            {% for error in form.review.errors %}
-                <span class="error-message">{{ error }}</span>
-            {% endfor %}
+        <div class="form-group checkbox-group">
+            {{ form.will_attend() }} {{ form.will_attend.label }}
         </div>
 
         <div class="form-group">
