@@ -1,70 +1,65 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background: #f8f9fa;
     padding: 20px;
 }
 
 .form-container {
     background: white;
-    padding: 25px;
-    width: 400px;
+    padding: 20px;
+    width: 450px;
     margin: auto;
     border-radius: 8px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
-.input, .textarea {
+.input {
     width: 100%;
-    padding: 8px 10px;
-    border: 1px solid #ccc;
+    padding: 8px;
+    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
 }
 
-.input.error, .textarea.error {
-    border-color: #e74c3c;
+.input.error {
+    border-color: red;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
 }
 
 .error-message {
-    color: #e74c3c;
+    color: red;
     font-size: 12px;
-    margin-top: 4px;
 }
 
 .btn {
-    width: 100%;
+    background: #28a745;
+    color: white;
     padding: 10px;
-    background: #27ae60;
+    width: 100%;
     border: none;
     border-radius: 4px;
-    color: white;
-    font-weight: bold;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: #219150;
+    background: #218838;
 }
 
 .flash-message {
-    width: 400px;
+    padding: 10px;
     margin: 10px auto;
-    padding: 12px;
-    border-radius: 5px;
+    width: 450px;
+    border-radius: 4px;
     text-align: center;
-    font-weight: 600;
 }
 
-.flash-message.success {
-    background: #d4edda;
-    color: #155724;
-}
+.flash-message.success { background: #d4edda; color: #155724; }
+.flash-message.error { background: #f8d7da; color: #721c24; }
